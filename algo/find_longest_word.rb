@@ -1,5 +1,5 @@
 # Complete the method called find_longest_word, which will accept a string as a parameter (usually a sentence), and return another string that will be the longest word in that sentence.
-
+# require 'pry'
 def find_longest_word(sentence)
   words = sentence.split(/\W+/)
   @lengths = {}
@@ -8,7 +8,7 @@ def find_longest_word(sentence)
   end
 
   max_value = @lengths.values.max
-  keys = @lengths.select{|k, v| v == max_value}.keys.to_s
+  @lengths.select{|k, v| v == max_value}.keys[0]
 
 end
 
